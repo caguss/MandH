@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "748794421479",
+    "project_id": "mandh-96cc1",
+    "storage_bucket": "mandh-96cc1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748794421479:android:4b0fc620f4e37dce818242",
+        "android_client_info": {
+          "package_name": "com.bcs.MandH"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748794421479-4jbvrdl19k0qapu6uls8mapf7ue1sou0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6jyR9rcYd4BcpaLKXp2pyJ9GsdszJCTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748794421479-4jbvrdl19k0qapu6uls8mapf7ue1sou0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "748794421479-6ntiaptq3kge5mhh65ku8m84bnof24sd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bcs.MandH"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

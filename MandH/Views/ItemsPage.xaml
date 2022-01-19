@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MandH.Views.ItemsPage"
+             Title="{Binding Title}"
+            xmlns:local ="clr-namespace:MandH.Views" 
+             x:Name="BrowseItemsPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="icon_about.png" Command="{Binding AboutCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#15704e</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0">
+            <RefreshView x:Name="listRefreshView" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                <ScrollView>
+                    <StackLayout x:Name="stlMenu" Padding="5" Spacing="10">
+                        <Label Text="점심" LineBreakMode="CharacterWrap" FontAttributes="Bold" FontSize="26" BackgroundColor="{StaticResource Accent}" HorizontalTextAlignment="Center" TextColor="White"></Label>
+                        <Label x:Name="lblLunch"  Text="{Binding Lunch}" HorizontalTextAlignment="Center" FontSize="20" CharacterSpacing="1" LineHeight="0.9" TextColor="Black"></Label>
+                        <Label Text="도시락" FontAttributes="Bold" FontSize="26" BackgroundColor="{StaticResource Accent}" HorizontalTextAlignment="Center" TextColor="White"></Label>
+                        <Label x:Name="lblLunchBox" Text="{Binding Lunchbox}"  HorizontalTextAlignment="Center" FontSize="20" TextColor="Black" LineHeight="0.9"></Label>
+                        <Label Text="저녁" FontAttributes="Bold" FontSize="26" BackgroundColor="{StaticResource Accent}" HorizontalTextAlignment="Center" TextColor="White"></Label>
+                        <Label x:Name="lblDinner" Text="{Binding Dinner}"  HorizontalTextAlignment="Center" FontSize="20" TextColor="Black" LineHeight="0.9"></Label>
+                    </StackLayout>
+                </ScrollView>
+            </RefreshView>
+        </StackLayout>
+        <Grid Grid.Row="1">
+
+            <local:AdMobView  WidthRequest="320" Size="Standardbanner" HeightRequest="50"></local:AdMobView>
+        </Grid>
+    </Grid>
+</ContentPage>

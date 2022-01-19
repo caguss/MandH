@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+  <style name="MainTheme" parent="MainTheme.Base">
+
+	  <item name="colorPrimary">#0e4e36</item>
+	  <item name="colorPrimaryDark">#0e4e36</item>
+	  <item name="colorAccent">#0e4e36</item>
+  </style>
+
+	<style name="SplashTheme" parent ="@android:Theme">
+		<item name="android:windowBackground">@drawable/Splash</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowActionBar">false</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowIsTranslucent">false</item>
+		<item name="android:windowIsFloating">false</item>
+		<item name="android:backgroundDimEnabled">true</item>
+	</style>
+</resources>
