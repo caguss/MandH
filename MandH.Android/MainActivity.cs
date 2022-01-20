@@ -15,7 +15,7 @@ namespace MandH.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            MobileAds.Initialize(this);
+            MobileAds.Initialize(ApplicationContext);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());

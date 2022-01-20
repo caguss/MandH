@@ -35,7 +35,7 @@
 	<key>UIMainStoryboardFile</key>
 	<string>LaunchScreen</string>
 	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-4681470946279796~3996833725</string>
+	<string>ca-app-pub-3940256099942544~1458002511</string>
 	<key>GADIsAdManagerApp</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
