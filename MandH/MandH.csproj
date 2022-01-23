@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Icon.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="MarcTron.Admob" Version="1.6.9" />
     <PackageReference Include="MySqlConnector" Version="2.1.2" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />  
