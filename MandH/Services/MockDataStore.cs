@@ -12,7 +12,7 @@ namespace MandH.Services
     public class MockDataStore : IDataStore<FoodString>
     {
         private List<FoodString> foodStrings;
-
+        public DataTable abouttable;
         public MockDataStore()
         {
             GetRefresh();
@@ -63,32 +63,20 @@ namespace MandH.Services
                 cmd.Parameters.Add(pstart);
                 cmd.Parameters.Add(pend);
 
-                DataTable dt = new DataTable();
+                DataSet ds = new DataSet();
                 MySqlDataAdapter adpt = new MySqlDataAdapter(cmd);
-                adpt.Fill(dt);
-            
+                adpt.Fill(ds);
+            abouttable = ds.Tables[1];
 
-                for (int i = 0; i < dt.Rows.Count; i++)
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
-                    foodStrings.Add(new FoodString() { Date = dt.Rows[i]["date"].ToString(), Lunch = dt.Rows[i]["lunchstring"].ToString().Replace("\\n", System.Environment.NewLine), LunchBox = dt.Rows[i]["lunchboxstring"].ToString().Replace("\\n", System.Environment.NewLine), Dinner = dt.Rows[i]["dinnerstring"].ToString().Replace("\\n", System.Environment.NewLine) });
+                    foodStrings.Add(new FoodString() { Date = ds.Tables[0].Rows[i]["date"].ToString(), Lunch = ds.Tables[0].Rows[i]["lunchstring"].ToString().Replace("\\n", System.Environment.NewLine), LunchBox = ds.Tables[0].Rows[i]["lunchboxstring"].ToString().Replace("\\n", System.Environment.NewLine), Dinner = ds.Tables[0].Rows[i]["dinnerstring"].ToString().Replace("\\n", System.Environment.NewLine) });
                 }
             }
         }
         public DataTable AboutRefresh()
         {
-            string strConn = $"Server={Properties.Resources.server};Database={Properties.Resources.database};Uid={Properties.Resources.id};Pwd={Properties.Resources.pw};";
-            using (MySqlConnection conn = new MySqlConnection(strConn))
-            {
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand("mh_about", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                DataTable dt = new DataTable();
-                MySqlDataAdapter adpt = new MySqlDataAdapter(cmd);
-                adpt.Fill(dt);
-
-                return dt;
-            }
+            return abouttable;
         }
     }
 }

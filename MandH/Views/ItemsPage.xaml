@@ -38,7 +38,7 @@
             <controls:MTAdView x:Name="myAds" 
                                AdsId="{OnPlatform Android='ca-app-pub-4582877447179169/8068729576', 
                                                   iOS='ca-app-pub-3940256099942544/2934735716'}"
-                               HeightRequest="60"/>
+                               HeightRequest="50"/>
         </Grid>
     </Grid>
 </ContentPage>

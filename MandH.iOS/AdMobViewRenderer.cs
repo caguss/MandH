@@ -33,7 +33,7 @@ namespace MandH.iOS
                 bannerView = new BannerView(size: AdSizeCons.Banner, origin: new CGPoint(-10, 0))
                 {
                     //AdUnitID = "ca-app-pub-4681470946279796/3043892478",
-                    AdUnitID = "ca-app-pub-3940256099942544/2934735716",
+                    AdUnitID = "ca-app-pub-4582877447179169/3917553965",
                     RootViewController = viewCtrl
                 };
 

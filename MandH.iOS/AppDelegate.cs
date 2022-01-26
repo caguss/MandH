@@ -23,7 +23,8 @@ namespace MandH.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            MobileAds.Configure("ca-app-pub-3940256099942544~1458002511");
+            //MobileAds.Configure("ca-app-pub-3940256099942544~1458002511");
+            MobileAds.SharedInstance.Start(completionHandler: null);
 
 
             LoadApplication(new App());

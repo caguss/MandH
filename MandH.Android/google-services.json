@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:748794421479:android:4b0fc620f4e37dce818242",
+        "mobilesdk_app_id": "1:748794421479:android:be061eef9613f5a0818242",
         "android_client_info": {
-          "package_name": "com.bcs.MandH"
+          "package_name": "com.bcs.mandh"
         }
       },
       "oauth_client": [
